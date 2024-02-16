@@ -215,7 +215,7 @@ macro(draco_set_optional_features)
     endif()
 
 
-    if(NOT EMSCRIPTEN)
+
       # For now, enable deduplication for both encoder and decoder.
       # TODO(ostava): Support for disabling attribute deduplication for the C++
       # decoder is planned in future releases.
@@ -223,7 +223,7 @@ macro(draco_set_optional_features)
                            DRACO_ATTRIBUTE_INDICES_DEDUPLICATION_SUPPORTED)
       draco_enable_feature(FEATURE
                            DRACO_ATTRIBUTE_VALUES_DEDUPLICATION_SUPPORTED)
-    endif()
+
   endif()
 
   if(DRACO_UNITY_PLUGIN)
